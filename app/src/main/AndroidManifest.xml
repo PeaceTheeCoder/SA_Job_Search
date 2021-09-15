@@ -8,13 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/splash_theme">
-        <activity android:name=".user"
-            android:label="Profile"/>
-        <activity android:name=".bookmark"
-            android:label="Bookmark"/>
-        <activity android:name=".settings"
-            android:label="Settings"/>
+        android:theme="@style/splash_theme"
+        android:windowSoftInputMode="adjustResize">
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".SearchActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

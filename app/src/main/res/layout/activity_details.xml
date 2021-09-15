@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="?attr/colorPrimary">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:background="@android:color/transparent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job Details"
+                android:textSize="20sp"
+                android:textColor="?attr/textColor"
+                android:textStyle="bold"
+                android:background="?attr/colorPrimary"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/topBar"
+        android:id="@+id/head_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="?attr/backgroundColor"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="7dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt"
+            android:visibility="gone"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            >
+            <LinearLayout
+                android:id="@+id/cardHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/job_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Job Title "
+                    android:textColor="?attr/textColorMuted"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/job_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 June 2020"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textAlignment="viewEnd"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/cardHead"
+                android:id="@+id/cardBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_location_on_24"/>
+                    <TextView
+                        android:id="@+id/job_location"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pretoria"
+                        android:textColor="?attr/textColorMuted"
+                        android:textSize="16dp"
+                        android:textAlignment="viewStart"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status"
+                        android:textColor="?attr/textColorMuted"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:id="@+id/job_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open"
+                        android:textColor="?attr/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textAlignment="viewEnd"
+                        android:layout_weight="1"
+
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/job_body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/head_card"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/job_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_eg"
+                    android:textColor="?attr/textColorMuted"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Company name"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/job_company_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MTN Group"
+                    android:textColor="?attr/textColorMuted"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Salary"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/job_salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ZAR5000 per month"
+                    android:textColor="?attr/textColorMuted"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Closing date"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/job_closing_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20 November 2020"
+                    android:textColor="?attr/textColorMuted"
+                    android:textSize="16dp"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:backgroundTint="?attr/colorPrimary"
+        android:textColor="?attr/textColor"
+        app:cornerRadius="10dp"
+        android:padding="12dp"
+        android:layout_margin="5dp"
+        android:textAllCaps="false"
+        app:elevation="8dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

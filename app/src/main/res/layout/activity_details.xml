@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailsActivity">
+    tools:context=".ui.postDetail.DetailsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                     android:id="@+id/job_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Job Title "
+                    android:text=""
                     android:textColor="?attr/textColorMuted"
                     android:textStyle="bold"
                     android:textSize="18dp"
@@ -92,7 +92,7 @@
                     android:id="@+id/job_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12 June 2020"
+                    android:text=""
                     android:textColor="?attr/colorPrimary"
                     android:textStyle="bold"
                     android:textSize="16dp"
@@ -123,7 +123,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pretoria"
+                        android:text=""
                         android:textColor="?attr/textColorMuted"
                         android:textSize="16dp"
                         android:textAlignment="viewStart"
@@ -196,7 +196,7 @@
                     android:id="@+id/job_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/text_eg"
+                    android:text=""
                     android:textColor="?attr/textColorMuted"
                     android:textSize="16dp"
                     android:layout_marginTop="10dp"/>
@@ -220,7 +220,7 @@
                     android:id="@+id/job_company_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MTN Group"
+                    android:text="None"
                     android:textColor="?attr/textColorMuted"
                     android:textSize="16dp"
                     android:layout_marginTop="10dp"/>
@@ -244,7 +244,7 @@
                     android:id="@+id/job_salary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ZAR5000 per month"
+                    android:text=""
                     android:textColor="?attr/textColorMuted"
                     android:textSize="16dp"
                     android:layout_marginTop="10dp"/>
@@ -267,10 +267,11 @@
                     android:id="@+id/job_closing_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="20 November 2020"
+                    android:text=""
                     android:textColor="?attr/textColorMuted"
                     android:textSize="16dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"/>
             </LinearLayout>
 
         </LinearLayout>
